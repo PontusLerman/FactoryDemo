@@ -4,7 +4,7 @@ namespace FactoryDemo.Infrastructure.Strategies
 {
     public class CircleStrategy : IShapeStrategy
     {
-        public string Exceute(IShape shape)
+        public string Execute(IShape shape)
         {
             return "that is using circle strategy";
         }

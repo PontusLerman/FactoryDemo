@@ -20,7 +20,7 @@ namespace FactoryDemo.Application
 
             var drawnShape = shape.Draw();
             
-            var strategyShape = strategy.Exceute(shape);
+            var strategyShape = strategy.Execute(shape);
          
             Console.WriteLine($"{drawnShape} {strategyShape}");
 

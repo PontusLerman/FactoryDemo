@@ -2,6 +2,6 @@
 {
     public interface IShapeStrategy
     {
-        string Exceute(IShape shape);
+        string Execute(IShape shape);
     }
 }
