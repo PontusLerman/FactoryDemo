@@ -1,6 +1,4 @@
-﻿using FactoryDemo.Domain;
-
-namespace FactoryDemo.Application
+﻿namespace FactoryDemo.Domain
 {
     public interface IShapeStrategyResolver
     {
