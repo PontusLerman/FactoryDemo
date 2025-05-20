@@ -16,7 +16,8 @@ namespace FactoryDemo
 
             //Setup the service and factory
             IShapeFactory factory = new ShapeFactory(circlePool, squarePool, trianglePool);
-            var service = new ShapeService(factory);
+            IShapeStrategyResolver resolver = new ShapeStrategyResolver();
+            var service = new ShapeService(factory, resolver);
 
             //Run parallel drawings of shapes
             string[] shapeTypes = { "circle", "square", "triangle" };

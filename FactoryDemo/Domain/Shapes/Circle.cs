@@ -3,9 +3,9 @@
     public class Circle : IShape
     {
         public string? Color { get; set; }
-        public void Draw()
+        public string Draw()
         {
-            Console.WriteLine($"This is a {Color ?? "default"} colored cirle");
+            return $"This is a {Color ?? "default"} colored cirle";
         }
 
         public void Reset()

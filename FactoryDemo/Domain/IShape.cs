@@ -2,7 +2,7 @@
 {
     public interface IShape
     {
-        void Draw();
+        string Draw();
 
         void Reset();
     }

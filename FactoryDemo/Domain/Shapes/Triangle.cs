@@ -3,9 +3,9 @@
     public class Triangle : IShape
     {
         public string? Color { get; set; }
-        public void Draw()
+        public string Draw()
         {
-            Console.WriteLine($"This is a {Color ?? "default"} colored triangle");
+            return $"This is a {Color ?? "default"} colored triangle";
         }
 
         public void Reset()

@@ -3,9 +3,9 @@
     public class Square : IShape
     {
         public string? Color { get; set; }
-        public void Draw()
+        public string Draw()
         {
-            Console.WriteLine($"This is a {Color ?? "default"} colored square");
+            return $"This is a {Color ?? "default"} colored square";
         }
 
         public void Reset()
