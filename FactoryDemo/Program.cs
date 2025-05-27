@@ -23,14 +23,14 @@ namespace FactoryDemo
             string[] shapeTypes = { "circle", "square", "triangle" };
             string[] colors = { "Red", "Blue", "Green" };
 
-            Parallel.For(0, 5, i =>
+            for (int i = 0; i < 2; i++)
             {
-                string type = shapeTypes[i % 3];
-                string color = colors[i % 3];
+                DemoLoop(service, shapeTypes, colors);
+            }            
+        }
 
-                service.DrawShape(type, color);
-            });
-
+        private static void DemoLoop(ShapeService service, string[] shapeTypes, string[] colors)
+        {
             Parallel.For(0, 5, i =>
             {
                 string type = shapeTypes[i % 3];
