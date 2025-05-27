@@ -25,9 +25,6 @@ namespace FactoryDemo.Application
          
             Console.WriteLine($"{drawnShape} {strategyShape}");
 
-            //Simulates work
-            Task.Delay(100).Wait();
-
             _factory.ReleaseShape(shape);
         }
     }

@@ -33,7 +33,7 @@ namespace FactoryDemo
         {
             var randomNumber = new Random();
 
-            Parallel.For(0, 10, i =>
+            Parallel.For(0, 6, i =>
             {
                 string type = shapeTypes[i % 3];
                 string color = colors[randomNumber.Next(3)];
