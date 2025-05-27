@@ -16,6 +16,7 @@ namespace FactoryDemo.Application
         public void DrawShape (string shapeType, string color)
         {
             var shape = _factory.GetShape(shapeType,color);
+
             var strategy = _shapeStrategyResolver.Resolve(shape);
 
             var drawnShape = shape.Draw();
