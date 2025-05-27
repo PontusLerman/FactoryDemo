@@ -31,10 +31,12 @@ namespace FactoryDemo
 
         private static void DemoLoop(ShapeService service, string[] shapeTypes, string[] colors)
         {
-            Parallel.For(0, 5, i =>
+            var randomNumber = new Random();
+
+            Parallel.For(0, 10, i =>
             {
                 string type = shapeTypes[i % 3];
-                string color = colors[i % 3];
+                string color = colors[randomNumber.Next(3)];
 
                 service.DrawShape(type, color);
             });

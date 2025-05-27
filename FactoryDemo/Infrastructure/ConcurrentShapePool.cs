@@ -12,7 +12,7 @@ namespace FactoryDemo.Infrastructure
         {
             if (_pool.TryTake(out var shape))
             {
-                Console.WriteLine($"{shape} REUSED from pool");
+                Console.WriteLine($"{shape.GetType().Name} reused from pool");
                 return shape;
             }
             else
