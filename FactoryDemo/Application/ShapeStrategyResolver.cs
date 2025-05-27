@@ -13,7 +13,7 @@ namespace FactoryDemo.Application
             {
                 {typeof(Circle), new CircleStrategy() },
                 {typeof(Square), new SquareStrategy() },
-                {typeof (Triangle), new TriangleStrategy() }
+                {typeof(Triangle), new TriangleStrategy() }
             };
         }
 
