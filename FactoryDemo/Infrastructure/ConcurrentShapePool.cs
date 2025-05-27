@@ -1,4 +1,5 @@
 ﻿using FactoryDemo.Domain;
+using FactoryDemo.Domain.Shapes;
 using System.Collections.Concurrent;
 
 namespace FactoryDemo.Infrastructure
@@ -7,7 +8,18 @@ namespace FactoryDemo.Infrastructure
     {
         private readonly ConcurrentBag<T> _pool = new();
 
-        public T Get() => _pool.TryTake(out var item) ? item : new T();
+        public T Get()
+        {
+            if (_pool.TryTake(out var shape))
+            {
+                Console.WriteLine($"{shape} REUSED from pool");
+                return shape;
+            }
+            else
+            {
+                return new();
+            }
+        }
 
         public void Release(T shape)
         {
